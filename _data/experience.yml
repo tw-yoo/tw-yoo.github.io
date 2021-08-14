@@ -1,15 +1,15 @@
 # Jobs
 # VP of Global Communications
-- company: AUTOCRYPT
-  position: Software Engineer
-  duration: Jul. 2021 &mdash; Present
-  location: Seoul, Republic of Korea
-  summary: 
+# - company: AUTOCRYPT
+#   position: Software Engineer
+#   duration: Jul. 2021 &mdash; Present
+#   location: Seoul, Republic of Korea
+#   summary: 
 
 # Director of Digital Stratgy
 - company: Human Centered AI Lab, University of Seoul
   position: Research Intern
-  duration:  Jul. 2020 &mdash; Jul. 2021
+  duration:  Jul. 2020 &mdash; Present
   location: Seoul, Republic of Korea
   summary: Developed  and  evaluated  a  mathematical  model  that  classify  deep  learning  lecture  videos  on YouTube according to its difficulty levels 
 
