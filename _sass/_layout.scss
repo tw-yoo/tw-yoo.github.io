@@ -1,74 +1,164 @@
-// Layout styles
-// ---------------------------------------/
+/**
+ * Site header
+ */
+.site-header {
+  border-bottom: 1px solid $grey-color-light;
+  min-height: 56px;
 
-// Layout from Primer (https://github.com/primer/primer/blob/master/scss/_layout.scss)
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-// Fixed-width, centered column for site content.
-.container {
-  width: $container-width;
-  margin-right: auto;
-  margin-left: auto;
-  @include clearfix;
+  @include media-query($on-mobile) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
 }
 
-// Grid system
-//
-// Create rows with `.columns` to clear the floated columns and outdent the
-// padding on `.column`s with negative margin for alignment.
-
-.columns {
-  margin-right: -$grid-gutter;
-  margin-left: -$grid-gutter;
-  @include clearfix;
-}
-
-// Base class for every column (requires a column width from below)
-.column {
+.site-title {
+  font-size: 26px;
+  line-height: 56px;
+  letter-spacing: -1px;
   float: left;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
+
+  img {
+    height: 28px;
+  }
+
+  &,
+  &:visited {
+    color: $grey-color-dark;
+  }
 }
 
-// Column widths
-.one-third {
-  width: 33.333333%;
+/**
+ * Site nav
+ */
+.site-nav {
+  z-index: 10;
+  float: right;
+  line-height: 56px;
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  @include media-query($on-mobile) {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+
+    border: 1px solid $grey-color-light;
+    border-radius: 5px;
+    text-align: right;
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 4px;
+      text-align: center;
+
+      background: #ffffff url($base-url + '/assets/img/menu.png') 6px 4px no-repeat;
+      background-size: 26px 26px;
+    }
+
+    .menu {
+      clear: both;
+      display: none;
+      background-color: #ffffff;
+      min-width: 10em;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      font-size: 16px;
+      display: block;
+      padding: 6px 16px;
+    }
+  }
 }
 
-.two-thirds {
-  width: 66.666667%;
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  padding: $spacing-unit 0;
+
+  @include media-query($on-mobile) {
+    padding-top: 10px;
+  }
 }
 
-.one-fourth {
-  width: 25%;
+.footer-heading {
+  font-size: 18px;
+  margin-bottom: $spacing-unit / 2;
 }
 
-.one-half {
-  width: 50%;
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
 }
 
-.three-fourths {
-  width: 75%;
+.footer-col-wrapper {
+  font-size: 15px;
+  color: $grey-color;
+  margin-left: -$spacing-unit / 2;
+  @extend %clearfix;
 }
 
-.one-fifth {
-  width: 20%;
+.footer-col {
+  float: left;
+  margin-bottom: $spacing-unit / 2;
+  padding-left: $spacing-unit / 2;
 }
 
-.four-fifths {
-  width: 80%;
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  width: -webkit-calc(33% - (#{$spacing-unit} / 2));
+  width: calc(33% - (#{$spacing-unit} / 2));
 }
 
-// Single column hack
-.single-column {
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
+.follow-links > .social-link {
+  flex: 0 50%;
 }
 
-// Equal width columns via table sorcery.
-.table-column {
-  display: table-cell;
-  width: 1%;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
-  vertical-align: top;
+.powered-by {
+  font-size: 13px !important;
+  color: $grey-color;
+}
+
+@include media-query($on-mobile) {
+  .footer-col {
+    float: none;
+    width: 100%;
+  }
+}
+
+/**
+ * Page content
+ */
+.page-content {
+  padding: $spacing-unit 0;
+}
+
+.page-heading {
+  font-size: 20px;
 }
