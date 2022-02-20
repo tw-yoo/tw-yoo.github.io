@@ -1,74 +1,67 @@
-// Layout styles
-// ---------------------------------------/
+main,
+footer > .footer_wrap,
+.nav-container {
+	margin: 0 auto;
+	display: flex;
+	width: 80%;
 
-// Layout from Primer (https://github.com/primer/primer/blob/master/scss/_layout.scss)
-
-// Fixed-width, centered column for site content.
-.container {
-  width: $container-width;
-  margin-right: auto;
-  margin-left: auto;
-  @include clearfix;
+	@media (min-width: $break-large) {
+		max-width: 1000px;
+	}
+	@media (max-width: $break-large) {
+		width: 90%;
+	}
+	@media (max-width: $break-medium) {
+		width: 88%;
+	}
+	@media (max-width: $break-small) {
+		width: 90%;
+	}
 }
 
-// Grid system
-//
-// Create rows with `.columns` to clear the floated columns and outdent the
-// padding on `.column`s with negative margin for alignment.
+main {
+	overflow: hidden;
+	padding-bottom: 50px;
 
-.columns {
-  margin-right: -$grid-gutter;
-  margin-left: -$grid-gutter;
-  @include clearfix;
+	@media (min-width: $break-large) {
+		padding: 30px 15px 50px 15px;
+	}
+
+	@media (min-width: $break-small) {
+		padding: 20px 15px 50px 15px;
+	}
 }
 
-// Base class for every column (requires a column width from below)
-.column {
-  float: left;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-// Column widths
-.one-third {
-  width: 33.333333%;
-}
+footer {
+	font-family: $source;
+	padding: 15px 0;
+	color: $light-gray;
 
-.two-thirds {
-  width: 66.666667%;
-}
+	.footer_wrap {
+		font-style: normal;
+		position: relative;
+		display: block;
 
-.one-fourth {
-  width: 25%;
-}
+		.copyright {
+			text-align: center;
+			font-size: 14px;
 
-.one-half {
-  width: 50%;
-}
+			@media (max-width: $break-small) {
+				float: none;
+				position: static;
+				margin-top: 6px;
+				font-size: 11px;
+			}
+		}
+	}
 
-.three-fourths {
-  width: 75%;
-}
-
-.one-fifth {
-  width: 20%;
-}
-
-.four-fifths {
-  width: 80%;
-}
-
-// Single column hack
-.single-column {
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
-}
-
-// Equal width columns via table sorcery.
-.table-column {
-  display: table-cell;
-  width: 1%;
-  padding-right: $grid-gutter;
-  padding-left: $grid-gutter;
-  vertical-align: top;
+	@media (min-width: $break-small) {
+		padding: 30px 0;
+	}
 }

@@ -1,18 +1,51 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<head lang="ko">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <!-- HTML Meta Tags -->
+  <title>{% if page.home == true %}{{ site.title }}{% elsif page.main == true %}{{ page.title }} | {{ site.title }}{% else %}{{ page.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.home == true %}{{ site.description }}{% else %}{{ site.title }}{% endif %}">
 
-  <!-- Google font typography settings - defined in _config.yml -->
-  {% if site.resume_theme == 'default' %}
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
-  {% endif %}
+  <!-- Naver Search Engine Tag -->
+  <meta name="naver-site-verification" content="55cc2fd19a3823b9a891312ff941dff197dc77be" />
 
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content="{% if page.home == true %}{{ site.title }}{% elsif page.main == true %}{{ page.title }} | {{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta itemprop="description" content="{% if page.home == true %}{{ site.description }}{% else %}{{ site:title }}{% endif %}">
+  <meta itemprop="image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% elsif page.recruit == true %}{{ site.url }}{{'/meta/meta_recruit_image.png'}}{% else %}{{ site.url }}{{'/meta/meta_image.png'}}{% endif %}">
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="icon" type="image/x-icon" href="/twyoo.png" />
+  <!-- Facebook Meta Tags -->
+  <!-- <meta property="og:url" content="{{ site.baseurl }}"> -->
+  <meta property="og:type" content="{% if page.post-header == true or page.project-header == true %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.home == true %}{{ site.title }}{% elsif page.main == true %}{{ page.title }} | {{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.home == true %}{{ site.description }}{% else %}{{ site:title }}{% endif %}">
+  <meta property="og:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% elsif page.recruit == true %}{{ site.url }}{{'/meta/meta_recruit_image.png'}}{% else %}{{ site.url }}{{'/meta/meta_image.png'}}{% endif %}">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.home == true %}{{ site.title }}{% elsif page.main == true %}{{ page.title }} | {{ site.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.home == true %}{{ site.description }}{% else %}{{ site:title }}{% endif %}">
+  <meta name="twitter:image" content="{% if page.post-header == true or page.project-header == true %}{{ site.url }}{{ page.url }}{{ page.header-img }}{% elsif page.recruit == true %}{{ site.url }}{{'/meta/meta_recruit_image.png'}}{% else %}{{ site.url }}{{'/meta/meta_image.png'}}{% endif %}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="/meta/favicon.ico">
+
+  <!-- Script -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-71KHZP8KQ5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-71KHZP8KQ5');
+
+  </script>
 </head>
+
+
