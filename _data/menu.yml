@@ -1,11 +1,11 @@
 - id: about
-  label: 개발팀 소개
+  label: About me
 
 - id: tech
-  label: 테크노트
+  label: Posts
 
-- id: life
-  label: 소소한 이야기
+#- id: life
+#  label: Blogs
 
-- id: recruit
-  label: 채용 정보
+#- id: recruit
+#  label: 채용 정보
