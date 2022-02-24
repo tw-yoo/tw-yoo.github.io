@@ -1,0 +1,11 @@
+- id: about
+  label: About me
+
+- id: tech
+  label: Posts
+
+#- id: life
+#  label: Blogs
+
+#- id: recruit
+#  label: 채용 정보
