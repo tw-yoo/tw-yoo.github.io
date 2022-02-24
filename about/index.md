@@ -1,7 +1,7 @@
 ---
 layout: main
 main: true
-title: 개발팀 소개
+title: About me
 ---
 
 <div class="loading-animation">

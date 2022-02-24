@@ -1,6 +1,6 @@
 ---
 layout: main
-title: 테크노트
+title: Posts
 main: true
 ---
 
