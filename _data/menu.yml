@@ -1,7 +1,7 @@
 - id: about
   label: About me
 
-- id: tech
+- id: post
   label: Posts
 
 #- id: life

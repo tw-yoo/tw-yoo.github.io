@@ -11,8 +11,8 @@ title: About me
             <div class="content">
                 <h1 class="subtitle">Work Experience</h1>
                 <ul class="culture">
-                    <li>Software Developer, Penta Security System (Alternative military service, 2021.08 ~ )</li>
-                    <li>Research Intern, KIST Europe Forschungsgesellschaft mbH (2019.08 ~ 2020.01)</li>
+                    <li>Software Developer, Penta Security System (Alternative military service, Aug. 2021 ~ )</li>
+                    <li>Research Intern, KIST Europe Forschungsgesellschaft mbH (Aug. 2019 ~ Jan. 2020)</li>
                 </ul>
             </div>
         </div>
@@ -35,7 +35,7 @@ title: About me
             <div class="content">
                 <h1 class="subtitle">Education</h1>
                 <ul class="environment">
-                    <li>Department of Software Convergence, Kyung Hee University (2017 ~ )</li>
+                    <li>Department of Software Convergence, Kyung Hee University (Mar. 2017 ~ )</li>
                 </ul>
             </div>
         </div>
@@ -44,7 +44,7 @@ title: About me
             <div class="content">
                 <h1 class="subtitle">Honors & Awards</h1>
                 <ul class="environment">
-                    <li> Excellence Award, Barrier Free App Development Contest (2022.02)</li>
+                    <li> Excellence Award, Barrier Free App Development Contest (2022)</li>
                     <li>The National Scholarship for Science and Engineering (2019)</li>
                     <li>The National Scholarship for Excellence in Software (2019)</li>
                     <li>Kyung Hee Humanitas Scholarship (2018, 2019)</li>
