@@ -2,4 +2,4 @@ _site
 .sass-cache
 .DS_Store
 _vendor
-./jekyll-cache
+.jekyll-cache
