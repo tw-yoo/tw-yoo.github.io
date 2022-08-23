@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Taewon Yoo"
   avatar           : "/assets/images/twyoo.jpg"
-  bio              : "HCI, Human-Centered AI"
-  location         : "Seoul, South Korea"
+  bio              : "Data Science, HCI, HCAI"
+  location         : "Seoul, Republic of Korea"
   email            :
   links:
     - label: "Email"
@@ -124,7 +124,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/tw-yoo"
+      # url: "https://github.com/tw-yoo"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/twy00"
